@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lato|Staatliches&display=swap');
+
+
+/* RGB */
+$mutedgreen: rgba(138, 176, 171, 1);
+$seafoam: rgba(165, 255, 214, 1);
+$darkgreen: rgba(38, 65, 60, 1);
+$white: rgba(234, 242, 238, 1);
+$browngrey: rgba(129, 127, 117, 1);
+$black: rgba(0, 0, 0, 1);
+
+$bigfont: 'Staatliches', cursive;
+$smallfont: 'Lato', sans-serif;
+
+body {
+    background-color: $white;
+    min-height: 100%;
+}
+
+p {
+    font-family: $smallfont;
+}

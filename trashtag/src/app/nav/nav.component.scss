@@ -1,0 +1,28 @@
+@import "../../styles.scss";
+
+ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    list-style-type: none;
+    display: inline-block;
+    width: 100px;
+}
+
+li a {
+    font-family: $smallfont;
+    text-align: center;
+    text-decoration: none;
+    color: $darkgreen;
+    transition: .5s;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: $seafoam;
+    transition: .5s;
+}

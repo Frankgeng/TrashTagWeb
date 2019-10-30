@@ -1,0 +1,17 @@
+@import "../../styles.scss";
+
+
+.container {
+    background-color: $darkgreen;
+    min-height: 100%;
+    width: 100%;
+
+}
+
+h2 {
+    font-family: $bigfont;
+    color: $white;
+    font-size: 40px;
+    font-weight: lighter;
+    padding: 10px;
+}

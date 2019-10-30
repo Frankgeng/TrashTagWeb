@@ -1,0 +1,27 @@
+@import "../../styles.scss";
+
+div {
+    min-height: 100%;
+    overflow: none;
+}
+
+h1 {
+    text-align: center;
+    color: $black;
+    font-family: $bigfont;
+    font-size: 200px;
+    margin-bottom: 10px;
+}
+h2 {
+    text-align: center;
+    color: $darkgreen;
+    font-family: $bigfont;
+    font-size: 60px;
+}
+svg {
+    width: 10%;
+    height: 10%;
+    display: block;
+    margin: auto;
+    margin-top: 0;
+}
