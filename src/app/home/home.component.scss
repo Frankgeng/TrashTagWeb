@@ -9,14 +9,14 @@ h1 {
     text-align: center;
     color: $black;
     font-family: $bigfont;
-    font-size: 200px;
+    font-size: 50px;
     margin-bottom: 10px;
 }
 h2 {
     text-align: center;
     color: $darkgreen;
     font-family: $bigfont;
-    font-size: 60px;
+    font-size: 30px;
 }
 svg {
     width: 10%;
@@ -24,4 +24,26 @@ svg {
     display: block;
     margin: auto;
     margin-top: 0;
+}
+
+.home_left {
+  height: 700px;
+  display: table;
+}
+
+.home_left::after {
+  opacity:.5;
+  background-image: url("../../assets/background.jpg");
+  position: absolute;
+  top: 0;
+  content: "";
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.home_left_content {
+  display: table-cell;
+  vertical-align: middle;
 }

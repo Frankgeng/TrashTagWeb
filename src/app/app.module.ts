@@ -7,6 +7,9 @@ import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { TooltipModule } from 'ngx-bootstrap/tooltip';
+import { ModalModule } from 'ngx-bootstrap/modal';
 import bootstrap from "bootstrap";
 
 
