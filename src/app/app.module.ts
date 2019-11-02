@@ -7,6 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
+import bootstrap from "bootstrap";
+
 
 @NgModule({
   declarations: [
@@ -14,7 +16,7 @@ import { NavComponent } from './nav/nav.component';
     LoginComponent,
     MapComponent,
     HomeComponent,
-    NavComponent
+    NavComponent,
   ],
   imports: [
     BrowserModule,
