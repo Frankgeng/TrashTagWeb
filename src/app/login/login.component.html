@@ -1,30 +1,30 @@
 <form [formGroup]="userForm" (submit)="saveUser()">
     <label for="name">Name</label>
-    <input formControlName="name" id="name" #name="ngControl" />
+    <input formControlName="name" id="name" />
     <div *ngIf="name.touched && name.hasError('required')">Required</div>
 
-    <label for="userName">Name</label>
-    <input formControlName="userName" id="userName" #userName="ngControl" />
+    <label for="userName">Username</label>
+    <input formControlName="userName" id="userName" />
     <div *ngIf="userName.touched && userName.hasError('required')">Required</div>
 
-    <label for="password">Name</label>
-    <input formControlName="password" id="password" #password="ngControl" type="password"/>
+    <label for="password">Password</label>
+    <input formControlName="password" id="password" type="password"/>
     <div *ngIf="password.touched && password.hasError('required')">Required</div>
   
     <label for="email">Email</label>
-    <input formControlName="email" id="email" #email="ngControl" />
+    <input formControlName="email" id="email" />
     <div *ngIf="email.touched && email.hasError('email')">Invalid</div>
   
     <label for="location">Location</label>
-    <input formControlName="location" id="location" #location="ngControl" />
+    <input formControlName="location" id="location" />
     <div *ngIf="location.touched && location.hasError('location')">Invalid</div>
 
     <label for="time">Time</label>
-    <input formControlName="time" id="time" #email="ngControl" />
+    <input formControlName="time" id="time" />
     <div *ngIf="time.touched && time.hasError('time')">Invalid</div>
 
     <label for="eventName">Event Name</label>
-    <input formControlName="eventName" id="eventName" #email="ngControl" />
+    <input formControlName="eventName" id="eventName" />
     <div *ngIf="eventName.touched && eventName.hasError('eventName')">Invalid</div>
 
     <button type="submit" [disabled]="!userForm.valid">Submit</button>
