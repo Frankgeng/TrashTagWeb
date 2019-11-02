@@ -1,8 +1,8 @@
-runtime:nodejs
-env:flex
+runtime: custom
+env: flex
 
-env_variables:
+env_variables: 
         TEMP: null
 
-manual_scaling:
-        instances:1
+manual_scaling: 
+        instances: 1
