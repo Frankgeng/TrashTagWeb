@@ -1,6 +1,6 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['pull', 'gcr.io/$PROJECT_ID0/latest-image']
+  args: ['pull', 'gcr.io/$PROJECT_ID/latest-image']
 - name: 'gcr.io/cloud-builders/npm'
   args: ['install']
 - name: 'gcr.io/cloud-builders/docker'
@@ -10,8 +10,7 @@ steps:
   env:
   - 'PROJECT_ID=$PROJECT_ID'
   - 'PORT: 4200'
-images: ['gcr.io/$PROJECT_ID/gcb-docker-compose:latest']
-steps:
-- name: 'gcr.io/cloud-builders/gcloud'
+- name: 'gcr.iocloud-builders/gcloud'
   args: ['app', 'deploy']
   timeout: '599s'
+images: ['gcr.io/$PROJECT_ID/gcb-docker-compose:latest']
