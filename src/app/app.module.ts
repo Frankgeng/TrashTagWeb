@@ -23,11 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     MapComponent,
     HomeComponent,
-<<<<<<< HEAD
-    NavComponent,
     CardComponent,
-=======
->>>>>>> 481df1b1e64250cdea3b0e0203852ecb88f2aef7
   ],
   imports: [
     BrowserModule,
