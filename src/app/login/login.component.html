@@ -19,5 +19,6 @@
 </form>
 
 <agm-map id="map" [latitude]="startlat" [longitude]="startlong" [zoom]="zoom">
-  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable">
+  </agm-marker>
 </agm-map>

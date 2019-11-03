@@ -4,6 +4,13 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AgmCoreModule } from '@agm/core';
 
+
+interface marker {
+	lat: number;
+	lng: number;
+	draggable: boolean;
+}
+
 @NgModule({
   imports: [FormsModule, ReactiveFormsModule]
 })
@@ -17,8 +24,7 @@ export class LoginComponent implements OnInit {
   userForm: any;
   startlat = 38.84;
   startlong = -99.38;
-  lat = 39.678418;
-  lng = -78.09007;
+  markers: marker;
   zoom = 3;
 
   constructor(private formBuilder: FormBuilder){
@@ -29,6 +35,7 @@ export class LoginComponent implements OnInit {
       eventName: ['', Validators.required],
       picture: ['', Validators.required]
     });
+    this.markers = [];
   }
 
 
@@ -47,6 +54,7 @@ sendData(event) {
   reader.onload = (event) => { // called once readAsDataURL finish
     let target: any = event.currentTarget; // bad hack
     let picString = target.result;
+    let parentThis = this;
     fetch(endPoint,
       {
       method: 'POST',
@@ -69,7 +77,7 @@ sendData(event) {
         time.value = "";
         let eventName = <HTMLInputElement>document.getElementById('eventName');
         eventName.value = "";
-        addMarker({lat:lat, lng:lng});
+        parentThis.markers.push({lat:lat, lng:lng, draggable: false});
       })
     })
       .then((data) => {})
@@ -77,11 +85,6 @@ sendData(event) {
     }
 }
   ngOnInit() {
-  }
-
-  addMarker(location) {
-    marker: AgmMarker = new AgmMarker();
-    marker.setLocation(location);
   }
 
 }
