@@ -79,7 +79,7 @@ def worker():
         return json.dumps(response)
     else:
         # TODO: send back list of all images
-
+        return "{}"
 if __name__ == '__main__':
 	# run!
     global images
