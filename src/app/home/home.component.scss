@@ -1,7 +1,14 @@
 @import "../../styles.scss";
 
-div {
-    min-height: 100%;
+div.bg {
+    min-height: 1240px;
+    background: url('/assets/dump.jpg') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-width: 1024px;
+    padding-top: 100px;
 }
 
 h1 {
@@ -11,6 +18,7 @@ h1 {
     font-size: 80px;
     margin-bottom: 10px;
     margin-top: 80px;
+    margin-left: 100px;
     
 }
 h2 {
@@ -18,13 +26,6 @@ h2 {
     color: $darkgreen;
     font-family: $bigfont;
     font-size: 30px;
-}
-svg {
-    width: 10%;
-    height: 10%;
-    display: block;
-    margin: auto;
-    margin-top: 0;
 }
 
 .home_left {

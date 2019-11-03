@@ -60,12 +60,26 @@ button:hover {
     form {
         min-width: 400px;
         display: block;
-        margin-left: auto;
+        margin-left: 100px;
         margin-right: auto;
         margin-bottom: 50px;
     }
     label {
         padding-right: 50px;
+    }
+}
+// @media only screen and (max-width: 1200px) {
+//     form {
+//         margin-left: 100px;
+//     }
+// }
+@media only screen and (max-width: 450px) {
+    form {
+        width: 250px;
+       margin-left: -300px;
+    }
+    input {
+        width: 200px;
     }
 }
 

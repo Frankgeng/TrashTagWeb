@@ -8,16 +8,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
-import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap/modal';
-import bootstrap from "bootstrap";
+
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { AgmCoreModule } from '@agm/core';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { CardsPageComponent } from './cards-page/cards-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+
 
 
 @NgModule({
@@ -27,6 +27,8 @@ import { CardsPageComponent } from './cards-page/cards-page.component';
     HomeComponent,
     CardComponent,
     CardsPageComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

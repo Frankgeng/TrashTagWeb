@@ -1,23 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="col-4" *ngFor="let d of data">
-      <mat-card class="example-card">
-        <mat-card-header>
-          <div mat-card-avatar class="example-header-image" style="background-image: url('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p240x240/54358279_306432519972531_3965436471380279296_n.jpg?_nc_cat=104&_nc_oc=AQmF18Uu7AoQWGINVvMwAM29RDkv_Qu-hn0-QYELqxSQIBVptCObyfhkn4wJzSmPx2A&_nc_ht=scontent-iad3-1.xx&oh=d5eeae2b6d0f02cc2123cf1267631c6a&oe=5E18BA26')"></div>
-          <mat-card-title>{{userForm.name}}</mat-card-title>
-          <mat-card-subtitle>{{userForm.location}} at {{userForm.time}}</mat-card-subtitle>
-        </mat-card-header>
-        <img mat-card-image src="https://www.thecollegefix.com/wp-content/uploads/2015/07/bottledwater.BobBBrown.Flickr-560x367.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>
-            {{userForm.eventName}}
-          </p>
-        </mat-card-content>
-        <mat-card-actions>
-          <fb-like></fb-like>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-</div>
-
-
+ <div class="container" >
+    <div class="row">
+      <div class="col-4">
+        <mat-card class="example-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image" style="background-image: url('https://scontent-iad3-1.xx.fbcdn.net/v/t1.0-1/p240x240/54358279_306432519972531_3965436471380279296_n.jpg?_nc_cat=104&_nc_oc=AQmF18Uu7AoQWGINVvMwAM29RDkv_Qu-hn0-QYELqxSQIBVptCObyfhkn4wJzSmPx2A&_nc_ht=scontent-iad3-1.xx&oh=d5eeae2b6d0f02cc2123cf1267631c6a&oe=5E18BA26')"></div>
+            <mat-card-title>{{name}}</mat-card-title>
+            <mat-card-subtitle>{{location}} at {{time}}</mat-card-subtitle>
+          </mat-card-header>
+          <!-- <img id="image" src="https://www.thecollegefix.com/wp-content/uploads/2015/07/bottledwater.BobBBrown.Flickr-560x367.jpg" alt="Photo of a Shiba Inu"> -->
+          <mat-card-content>
+            <p>
+              {{eventName}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <fb-like></fb-like>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+  </div>
