@@ -18,6 +18,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 import { CardsPageComponent } from './cards-page/cards-page.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { CardsPageComponent } from './cards-page/cards-page.component';
     HomeComponent,
     CardComponent,
     CardsPageComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

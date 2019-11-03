@@ -24,7 +24,8 @@ export class HomeComponent implements OnInit {
           console.log(event); // contains everything!
           var image = new Image();
           image.src = event.pic;
-          document.body.appendChild(image); // Make it not ugly lol
+          console.log(image)
+          //document.body.appendChild(image); // Make it not ugly lol
         }
       })
     })
