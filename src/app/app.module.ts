@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
-import { NavComponent } from './nav/nav.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -24,8 +23,11 @@ import { MatButtonModule } from '@angular/material/button';
     LoginComponent,
     MapComponent,
     HomeComponent,
+<<<<<<< HEAD
     NavComponent,
     CardComponent,
+=======
+>>>>>>> 481df1b1e64250cdea3b0e0203852ecb88f2aef7
   ],
   imports: [
     BrowserModule,
