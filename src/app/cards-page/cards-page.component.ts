@@ -7,7 +7,6 @@ import { CardComponent } from '../card/card.component';
   styleUrls: ['./cards-page.component.scss']
 })
 export class CardsPageComponent implements OnInit {
-  name = name;
   constructor() { }
 
   ngOnInit() {
@@ -25,6 +24,7 @@ export class CardsPageComponent implements OnInit {
           console.log(event); // contains everything!
           var image = <HTMLImageElement>document.getElementById('image');
           image.src = event.pic;
+          document.body.appendChild(image);
           var userName = document.getElementById('name');
           userName = event.name;
           var location = document.getElementById('location');
