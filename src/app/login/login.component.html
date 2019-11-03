@@ -17,8 +17,10 @@
 
     <button type="submit" [disabled]="!userForm.valid" id="submit">Submit</button>
 </form>
-
-<agm-map id="map" [latitude]="startlat" [longitude]="startlong" [zoom]="zoom">
-  <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable">
-  </agm-marker>
-</agm-map>
+<div class="map">
+    <agm-map id="map" [latitude]="startlat" [longitude]="startlong" [zoom]="zoom">
+        <agm-marker *ngFor="let m of markers" [latitude]="m.lat" [longitude]="m.lng" [markerDraggable]="m.draggable">
+        </agm-marker>
+      </agm-map>
+      
+</div>

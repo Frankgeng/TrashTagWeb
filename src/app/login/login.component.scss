@@ -54,6 +54,14 @@ button:hover {
 #picture:hover {
     cursor: pointer;
 }
+#map {
+    width:100% !important;
+    height:300px !important;
+    top:800px !important;
+    left:0px !important; 
+    position: fixed !important;
+    overflow: hidden;
+}
 
 
 @media only screen and (max-width: 500px) {
