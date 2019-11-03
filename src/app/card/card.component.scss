@@ -1,7 +1,8 @@
 .example-card {
   max-width: 400px;
   margin-top: 10px;
-  margin-bottom: 40px
+  margin-bottom: 10px;
+  text-align: center
 }
 
 .example-header-image {
@@ -10,4 +11,11 @@
 
 #image {
   max-width:320px;
+}
+
+.main-div{
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
