@@ -1,0 +1,55 @@
+@import "../../styles.scss";
+
+
+form {
+    background-color: $white;
+    min-height: 100%;
+    padding: 20px;
+    border-radius: 5%;
+    margin-top: 50px;
+    z-index: 3;
+}
+
+h2 {
+    font-family: $bigfont;
+    color: $white;
+    font-size: 30px;
+    font-weight: lighter;
+
+}
+label {
+    padding-right: 10px;
+
+}
+input {
+    margin-bottom: 10px;
+    left: 0;
+    width: 100%;
+    clear: both;
+}
+
+button {
+    background-color: $darkgreen;
+    color: $white;
+    border: 1px solid $white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+    text-transform: uppercase;
+    float: right;
+}
+
+
+@media only screen and (max-width: 500px) {
+    form {
+        min-width: 400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    label {
+        padding-right: 50px;
+    }
+}

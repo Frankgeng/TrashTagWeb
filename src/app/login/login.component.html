@@ -1,0 +1,17 @@
+<form [formGroup]="userForm" (ngSubmit)="sendData(userForm.value)">
+    <label for="name">Name</label>
+    <input formControlName="name" id="name" /><br>
+
+    <label for="location">Location</label>
+    <input formControlName="location" id="location" /><br>
+
+    <label for="time">Time</label>
+    <input formControlName="time" id="time" /><br>
+
+    <label for="eventName">Event Name</label>
+    <input formControlName="eventName" id="eventName" /><br>
+    <label for="picture">Picture</label>
+    <input formControlName="picture" type="file" id="picture" /><br>
+
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+  </form>
