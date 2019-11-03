@@ -37,7 +37,8 @@ sendData(event) {
   let reader = new FileReader();
   reader.readAsDataURL(pic);
   reader.onload = (event) => { // called once readAsDataURL finish
-    let picString = event.currentTarget.result;
+    let target: any = event.currentTarget; // bad hack
+    let picString = target.result;
     fetch(endPoint,
       {
       method: 'POST',
@@ -46,7 +47,8 @@ sendData(event) {
       mode: 'cors'
     }).then((res) => {
       res = res.json().then(function(inner){
-        console.log(inner); // this is where we get the success
+        console.log(inner); // this is where we get the success, do we want to
+                            // do anything here?
       })
     })
       .then((data) => {})

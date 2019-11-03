@@ -6,13 +6,6 @@ from functools import update_wrapper
 from flask_cors import CORS
 from PIL import Image
 
-class Event:
-    def __init__(picture, location, time, name, event_name):
-        this.picture = picture
-        this.location = location
-        this.time = time
-        this.name = name
-        this.event_name = event_name
 
 app = Flask(__name__)
 CORS(app)
@@ -66,23 +59,30 @@ def worker():
 	# read json + reply
     data = request.get_json(force=True)
     add = data['add']
+    images = pickle.load(open("images", "rb"))
     if add == 'true':
         pic = data["pic"]
-        pic = base64.b64decode(pic[PNG_START:] if pic[:13] == 'data:image/png' else pic[JPEG_START:])
+        # pic = base64.b64decode(pic[PNG_START:] if pic[:13] == 'data:image/png' else pic[JPEG_START:])
         location = data["location"]
         time = data["time"]
         event_name = data["eventName"]
-        event = Event(pic, location, time, name, event_name)
+        name = data["name"]
+        event = {"pic": pic, "location": location, "time": time, "name": name, "eventName":event_name}
         images.append(event)
-        pickle.dump(images, "images")
+        pickle.dump(images, open("images", "wb"))
         response = {"success": "true"}
         return json.dumps(response)
     else:
         # TODO: send back list of all images
-        return "{}"
+        for image in images:
+            print(image['name'])
+        val = json.dumps(images)
+        return val
 if __name__ == '__main__':
 	# run!
     global images
+    # images = []
+    # pickle.dump(images, open("images", "wb"))
     images = pickle.load(open("images", "rb"))
     app.debug = True
     app.run() #to have it work locally
