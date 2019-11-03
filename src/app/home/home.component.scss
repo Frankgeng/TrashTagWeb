@@ -1,13 +1,13 @@
 @import "../../styles.scss";
 
 div.bg {
-    min-height: 1240px;
+    min-height: 1040px;
     background: url('/assets/dump.jpg') no-repeat top center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    min-width: 1024px;
+    min-width: 900px;
     padding-top: 100px;
 }
 
