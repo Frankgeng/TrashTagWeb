@@ -1,7 +1,8 @@
 import { Component, OnInit, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
-import { ValidationService } from './validation.service';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   imports: [FormsModule, ReactiveFormsModule]
 })
@@ -17,20 +18,31 @@ export class LoginComponent implements OnInit {
   constructor(private formBuilder: FormBuilder){
     this.userForm = this.formBuilder.group({
       name: ['', Validators.required],
-      email: ['', [Validators.required, ValidationService.emailValidator]],
-      userName: ['', Validators.required],
-      password: ['', Validators.required],
       location: ['', [Validators.required, Validators.maxLength(50)]],
       time: ['', [Validators.required, Validators.maxLength(10)]],
       eventName: ['', Validators.required]
     });
   }
 
-  saveUser() {
-    if(this.userForm.dirty && this.userForm.valid) {
-      alert("${this.userForm.value.name}, thank you for your cleaning efforts!");
-    }
-  }
+sendData(event) {
+  const endPoint = 'http://172.28.215.5/receiver';
+  event.preventDefault();
+
+  let name = document.getElementById('name');
+  let location = document.getElementById('location');
+  let time = document.getElementById('time');
+  let eventName = document.getElementById('eventName');
+
+  fetch(endPoint, 
+    {
+    method: 'POST',
+    headers: new Headers(),
+    body:JSON.stringify({name:name, location:location, time:time, eventName:eventName})  
+    }).then((res) => res.json())
+    .then((data) => console.log(data))
+    .catch((err)=>console.log(err))
+}
+
   ngOnInit() {
   }
 
