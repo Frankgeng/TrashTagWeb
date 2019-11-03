@@ -1,6 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 
+interface card {
+	name: string,
+  location: string,
+  time: string,
+  eventName: string,
+  image: string
+}
+
+
 @Component({
   selector: 'app-cards-page',
   templateUrl: './cards-page.component.html',
