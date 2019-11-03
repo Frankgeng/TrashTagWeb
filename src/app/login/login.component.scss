@@ -55,12 +55,11 @@ button:hover {
     cursor: pointer;
 }
 #map {
-    width:100% !important;
-    height:300px !important;
-    top:800px !important;
-    left:0px !important; 
-    position: fixed !important;
-    overflow: hidden;
+    width:100vw !important;
+    position: relative;
+    height:400px !important;
+    left: -1250px;
+    margin-top: 50px;
 }
 
 
