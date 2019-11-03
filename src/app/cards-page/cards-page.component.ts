@@ -7,10 +7,14 @@ import { CardComponent } from '../card/card.component';
   styleUrls: ['./cards-page.component.scss']
 })
 export class CardsPageComponent implements OnInit {
-  constructor() { }
+  cards: card[];
+  constructor() {
+    this.cards = [];
+  }
 
   ngOnInit() {
     const endPoint = "http://127.0.0.1:5000/receiver";
+    let parentThis = this;
     fetch(endPoint,
       {
       method: 'POST',
@@ -22,24 +26,20 @@ export class CardsPageComponent implements OnInit {
         for (let i in inner) {
           const event = inner[i];
           console.log(event); // contains everything!
-          var image = <HTMLImageElement>document.getElementById('image');
-          image.src = event.pic;
-          document.body.appendChild(image);
-          var userName = document.getElementById('name');
-          userName = event.name;
-          var location = document.getElementById('location');
-          location.textContent = event.location;
-          var time = document.getElementById('time');
-          time.textContent = event.time;
-          var eventName = document.getElementById('eventName');
-          eventName.textContent = event.eventName;
-          
+          var image = new Image();
+          // image.src = event.pic;
+          // document.body.appendChild(image);
+          let userName = event.name;
+          let location = event.location;
+          let time = event.time;
+          let eventName = event.eventName;
+          parentThis.cards.push({name: userName, location: location, time: time, eventName: eventName, image: event.pic});
         }
       })
     })
       .then((data) => {})
       .catch((err)=>console.log(err))
-  
+
   }
 
 }

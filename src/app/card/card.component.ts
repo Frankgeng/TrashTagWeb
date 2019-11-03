@@ -11,7 +11,7 @@ export class CardComponent implements OnInit {
   @Input('location') location: string;
   @Input('time') time: string;
   @Input('eventName') eventName: string;
-  @Input('image') image: HTMLImageElement;
+  @Input('image') image: string;
   constructor() { }
 
   ngOnInit() {
