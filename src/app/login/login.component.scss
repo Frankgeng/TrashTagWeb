@@ -27,6 +27,9 @@ input {
     width: 100%;
     clear: both;
 }
+input:active {
+    outline-color: $darkgreen;
+}
 
 button {
     background-color: $darkgreen;
@@ -39,6 +42,17 @@ button {
     width: 100px;
     text-transform: uppercase;
     float: right;
+    transition: .5s;
+}
+button:hover {
+    background-color: $white;
+    border: solid 1px $darkgreen;
+    color: $darkgreen;
+    transition: .5s;
+    cursor: pointer;
+}
+#picture:hover {
+    cursor: pointer;
 }
 
 
@@ -48,6 +62,7 @@ button {
         display: block;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 50px;
     }
     label {
         padding-right: 50px;
