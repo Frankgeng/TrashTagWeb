@@ -2,6 +2,7 @@ import { Component, OnInit, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormBuilder, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   imports: [FormsModule, ReactiveFormsModule]
@@ -14,6 +15,11 @@ import { HttpClientModule } from '@angular/common/http';
 export class LoginComponent implements OnInit {
 
   userForm: any;
+  startlat = 38.84;
+  startlong = -99.38;
+  lat = 39.678418;
+  lng = -78.09007;
+  zoom = 3;
 
   constructor(private formBuilder: FormBuilder){
     this.userForm = this.formBuilder.group({
@@ -25,7 +31,7 @@ export class LoginComponent implements OnInit {
     });
   }
 
- 
+
 
 sendData(event) {
   const proxy = 'https://cors-anywhere.herokuapp.com/';
@@ -49,6 +55,9 @@ sendData(event) {
       mode: 'cors'
     }).then((res) => {
       res.json().then(function(inner){
+        console.log(inner);
+        let lat = inner[0].geometry.location.lat;
+        let lng = inner[0].geometry.location.lng;
         let button = document.getElementById('submit');
         button.style.backgroundColor = 'rgba(165, 255, 214, 1)';
         button.textContent = "Thank you!"
@@ -60,7 +69,7 @@ sendData(event) {
         time.value = "";
         let eventName = <HTMLInputElement>document.getElementById('eventName');
         eventName.value = "";
-
+        addMarker({lat:lat, lng:lng});
       })
     })
       .then((data) => {})
@@ -68,6 +77,11 @@ sendData(event) {
     }
 }
   ngOnInit() {
+  }
+
+  addMarker(location) {
+    marker: AgmMarker = new AgmMarker();
+    marker.setLocation(location);
   }
 
 }
