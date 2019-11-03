@@ -1,31 +1,24 @@
 <form [formGroup]="userForm" (submit)="saveUser()">
     <label for="name">Name</label>
-    <input formControlName="name" id="name" />
-    <div *ngIf="name.touched && name.hasError('required')">Required</div>
+    <input formControlName="name" id="name" /><br>
 
     <label for="userName">Username</label>
-    <input formControlName="userName" id="userName" />
-    <div *ngIf="userName.touched && userName.hasError('required')">Required</div>
+    <input formControlName="userName" id="userName" /><br>
 
     <label for="password">Password</label>
-    <input formControlName="password" id="password" type="password"/>
-    <div *ngIf="password.touched && password.hasError('required')">Required</div>
+    <input formControlName="password" id="password" type="password"/><br>
   
     <label for="email">Email</label>
-    <input formControlName="email" id="email" />
-    <div *ngIf="email.touched && email.hasError('email')">Invalid</div>
+    <input formControlName="email" id="email" /><br>
   
     <label for="location">Location</label>
-    <input formControlName="location" id="location" />
-    <div *ngIf="location.touched && location.hasError('location')">Invalid</div>
+    <input formControlName="location" id="location" /><br>
 
     <label for="time">Time</label>
-    <input formControlName="time" id="time" />
-    <div *ngIf="time.touched && time.hasError('time')">Invalid</div>
+    <input formControlName="time" id="time" /><br>
 
     <label for="eventName">Event Name</label>
-    <input formControlName="eventName" id="eventName" />
-    <div *ngIf="eventName.touched && eventName.hasError('eventName')">Invalid</div>
+    <input formControlName="eventName" id="eventName" /><br>
 
     <button type="submit" [disabled]="!userForm.valid">Submit</button>
   </form>

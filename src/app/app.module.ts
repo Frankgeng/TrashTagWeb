@@ -9,11 +9,13 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { MapComponent } from './map/map.component';
 import { HomeComponent } from './home/home.component';
-import { NavComponent } from './nav/nav.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule } from 'ngx-bootstrap/modal';
 import bootstrap from "bootstrap";
+import { CardComponent } from './card/card.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -22,7 +24,7 @@ import bootstrap from "bootstrap";
     LoginComponent,
     MapComponent,
     HomeComponent,
-    NavComponent,
+    CardComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,9 @@ import bootstrap from "bootstrap";
     HttpClientModule,
     FormsModule,
     RouterModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatCardModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
