@@ -52,6 +52,15 @@ sendData(event) {
         let button = document.getElementById('submit');
         button.style.backgroundColor = 'rgba(165, 255, 214, 1)';
         button.textContent = "Thank you!"
+        let name = <HTMLInputElement>document.getElementById('name');
+        name.value = "";
+        let location = <HTMLInputElement>document.getElementById('location');
+        location.value = "";
+        let time = <HTMLInputElement>document.getElementById('time');
+        time.value = "";
+        let eventName = <HTMLInputElement>document.getElementById('eventName');
+        eventName.value = "";
+
       })
     })
       .then((data) => {})

@@ -10,6 +10,7 @@ export class HomeComponent implements OnInit {
   constructor() { }
 
  ngOnInit() {
+<<<<<<< HEAD
     const endPoint = "http://127.0.0.1:5000/receiver";
     fetch(endPoint,
       {
@@ -32,6 +33,9 @@ export class HomeComponent implements OnInit {
       .then((data) => {})
       .catch((err)=>console.log(err))
   }
+=======
+ }
+>>>>>>> 1b1ba6c5fcb9a3f02bffbff2aea79032256c9afe
   
 
 }

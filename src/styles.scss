@@ -18,15 +18,11 @@ $smallfont: 'Lato', sans-serif;
 body {
     min-height: 100%;
     margin: 0 auto;
-    background: $seafoam;
+
     z-index: -1;
-    background-image: url('/assets/dump.jpg');
-    background-position: absolute;
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:cover;
 }
 
 p {
     font-family: $smallfont;
 }
+
