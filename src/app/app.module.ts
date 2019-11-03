@@ -16,6 +16,7 @@ import bootstrap from "bootstrap";
 import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
+import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { MatButtonModule } from '@angular/material/button';
     RouterModule,
     ReactiveFormsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    JwSocialButtonsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
