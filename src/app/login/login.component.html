@@ -1,21 +1,19 @@
 <form [formGroup]="userForm" (ngSubmit)="sendData(userForm.value)">
     <label for="name">Name</label>
-    <input formControlName="name" id="name" /><br>
+    <input formControlName="name" id="name" placeholder="Good Samaritan"/><br>
 
     <label for="location">Location</label>
-    <input formControlName="location" id="location" /><br>
+    <input formControlName="location" id="location" placeholder="123 Dirty Pl"/><br>
 
-    <label for="time">Time</label>
-    <input formControlName="time" id="time" /><br>
+    <label for="time">Time & Date</label>
+    <input formControlName="time" id="time" placeholder="mm/dd/yyyy 0:00"/><br>
 
-    <label for="eventName">Event Name</label>
+    <label for="eventName">Event Description</label>
     <input formControlName="eventName" id="eventName" /><br>
-    <label for="picture">Picture</label>
-    <input formControlName="picture" type="file" id="picture" /><br>
 
-    <label for="trashImage">Image</label>
-   
+    <label for="picture">Picture</label>
+    <input formControlName="picture" type="file" id="picture" /><br>   
     
 
-    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+    <button type="submit" [disabled]="!userForm.valid" id="submit">Submit</button>
   </form>

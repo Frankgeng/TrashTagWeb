@@ -17,6 +17,7 @@ import { CardComponent } from './card/card.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
+import { CardsPageComponent } from './cards-page/cards-page.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
     MapComponent,
     HomeComponent,
     CardComponent,
+    CardsPageComponent,
   ],
   imports: [
     BrowserModule,

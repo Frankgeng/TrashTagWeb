@@ -9,7 +9,7 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+ ngOnInit() {
     const endPoint = "http://127.0.0.1:5000/receiver";
     fetch(endPoint,
       {
@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
       body:JSON.stringify({add:'false'}),
       mode: 'cors'
     }).then((res) => {
-      res = res.json().then(function(inner){
+      res.json().then(function(inner){
         for (let i in inner) {
           const event = inner[i];
           console.log(event); // contains everything!
@@ -31,5 +31,6 @@ export class HomeComponent implements OnInit {
       .then((data) => {})
       .catch((err)=>console.log(err))
   }
+  
 
 }

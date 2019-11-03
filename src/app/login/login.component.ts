@@ -25,6 +25,8 @@ export class LoginComponent implements OnInit {
     });
   }
 
+ 
+
 sendData(event) {
   const proxy = 'https://cors-anywhere.herokuapp.com/';
   const endPoint = 'http://127.0.0.1:5000/receiver';
@@ -46,9 +48,10 @@ sendData(event) {
       body:JSON.stringify({add:'true', name:name, location:location, time:time, eventName:eventName, pic:picString}),
       mode: 'cors'
     }).then((res) => {
-      res = res.json().then(function(inner){
-        console.log(inner); // this is where we get the success, do we want to
-                            // do anything here?
+      res.json().then(function(inner){
+        let button = document.getElementById('submit');
+        button.style.backgroundColor = 'rgba(165, 255, 214, 1)';
+        button.textContent = "Thank you!"
       })
     })
       .then((data) => {})
