@@ -24,7 +24,7 @@ export class LoginComponent implements OnInit {
   userForm: any;
   startlat = 38.84;
   startlong = -99.38;
-  markers: marker;
+  markers: marker[];
   zoom = 3;
 
   constructor(private formBuilder: FormBuilder){
