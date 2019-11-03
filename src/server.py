@@ -1,11 +1,12 @@
 from io import BytesIO
 from flask import Flask, render_template, request, redirect, Response, make_response, current_app
-import random, json, base64, time, os, io, sys, pickle
+import random, json, base64, time, os, io, sys, pickle, googlemaps
 from datetime import timedelta
 from functools import update_wrapper
 from flask_cors import CORS
 from PIL import Image
 
+gmaps = googlemaps.Client(key="AIzaSyCQAR1Y_Mnek-Z3QskKh8Z9FDF_QpYWvEI")
 
 app = Flask(__name__)
 CORS(app)
@@ -68,9 +69,11 @@ def worker():
         event_name = data["eventName"]
         name = data["name"]
         event = {"pic": pic, "location": location, "time": time, "name": name, "eventName":event_name}
+        loc = gmaps.geocode(location)
+        print(loc)
         images.append(event)
         pickle.dump(images, open("images", "wb"))
-        response = {"success": "true"}
+        response = loc
         return json.dumps(response)
     else:
         # TODO: send back list of all images

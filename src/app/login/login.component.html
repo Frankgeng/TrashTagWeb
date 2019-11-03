@@ -12,8 +12,12 @@
     <input formControlName="eventName" id="eventName" /><br>
 
     <label for="picture">Picture</label>
-    <input formControlName="picture" type="file" id="picture" /><br>   
-    
+    <input formControlName="picture" type="file" id="picture" /><br>
+
 
     <button type="submit" [disabled]="!userForm.valid" id="submit">Submit</button>
-  </form>
+</form>
+
+<agm-map id="map" [latitude]="startlat" [longitude]="startlong" [zoom]="zoom">
+  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+</agm-map>
